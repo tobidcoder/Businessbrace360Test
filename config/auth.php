@@ -40,14 +40,15 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
         'api' => [
-            'driver' => 'token',
+            'driver' => 'passport',
             'provider' => 'users',
-            'hash' => false,
+        ],
+        'api-admin' => [
+            'driver' => 'passport',
+            'provider' => 'api-admin',
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | User Providers

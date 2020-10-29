@@ -17,3 +17,19 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::resource('admins', 'AdminAPIController');
+
+Route::resource('users', 'UsersAPIController');
+
+Route::resource('answers', 'AnswerAPIController');
+
+Route::resource('candidates', 'CandidateAPIController');
+Route::post('/candidates/login', 'CandidateAPIController@login');
+
+Route::resource('jobs', 'JobAPIController');
+
+Route::resource('job_applicants', 'JobApplicantAPIController');
+
+Route::resource('tests', 'TestAPIController');

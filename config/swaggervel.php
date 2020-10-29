@@ -137,7 +137,7 @@ return [
       |--------------------------------------------------------------------------
     */
     'use-basic-auth-with-access-code-grant' => false,
-    
+
     /*
       |--------------------------------------------------------------------------
       | Middleware settings to check for user authorization.

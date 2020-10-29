@@ -1,0 +1,1840 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Business Brace 360 Test",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "/api",
+            "description": "Laravel Generator APIs"
+        }
+    ],
+    "paths": {
+        "/admins": {
+            "get": {
+                "tags": [
+                    "Admin"
+                ],
+                "summary": "Get a listing of the Admins.",
+                "description": "Get all Admins",
+                "operationId": "App\\Http\\Controllers\\API\\AdminAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Admin"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Admin"
+                ],
+                "summary": "Store a newly created Admin in storage",
+                "description": "Store Admin",
+                "operationId": "App\\Http\\Controllers\\API\\AdminAPIController::store",
+                "requestBody": {
+                    "description": "Admin that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Admin"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Admin"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/admins/{id}": {
+            "get": {
+                "tags": [
+                    "Admin"
+                ],
+                "summary": "Display the specified Admin",
+                "description": "Get Admin",
+                "operationId": "App\\Http\\Controllers\\API\\AdminAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Admin",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Admin"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Admin"
+                ],
+                "summary": "Update the specified Admin in storage",
+                "description": "Update Admin",
+                "operationId": "App\\Http\\Controllers\\API\\AdminAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Admin",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Admin that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Admin"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Admin"
+                ],
+                "summary": "Remove the specified Admin from storage",
+                "description": "Delete Admin",
+                "operationId": "App\\Http\\Controllers\\API\\AdminAPIController::destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Admin",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/answers": {
+            "get": {
+                "tags": [
+                    "Answer"
+                ],
+                "summary": "Get a listing of the Answers.",
+                "description": "Get all Answers",
+                "operationId": "App\\Http\\Controllers\\API\\AnswerAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Answer"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Answer"
+                ],
+                "summary": "Store a newly created Answer in storage",
+                "description": "Store Answer",
+                "operationId": "App\\Http\\Controllers\\API\\AnswerAPIController::store",
+                "requestBody": {
+                    "description": "Answer that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Answer"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Answer"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/answers/{id}": {
+            "get": {
+                "tags": [
+                    "Answer"
+                ],
+                "summary": "Display the specified Answer",
+                "description": "Get Answer",
+                "operationId": "App\\Http\\Controllers\\API\\AnswerAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Answer",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Answer"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Answer"
+                ],
+                "summary": "Update the specified Answer in storage",
+                "description": "Update Answer",
+                "operationId": "App\\Http\\Controllers\\API\\AnswerAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Answer",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Answer that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Answer"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Answer"
+                ],
+                "summary": "Remove the specified Answer from storage",
+                "description": "Delete Answer",
+                "operationId": "App\\Http\\Controllers\\API\\AnswerAPIController::destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Answer",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/candidates": {
+            "get": {
+                "tags": [
+                    "Candidate"
+                ],
+                "summary": "Get a listing of the Candidates.",
+                "description": "Get all Candidates",
+                "operationId": "App\\Http\\Controllers\\API\\CandidateAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Candidate"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Candidate"
+                ],
+                "summary": "Store a newly created Candidate in storage",
+                "description": "Store Candidate",
+                "operationId": "App\\Http\\Controllers\\API\\CandidateAPIController::store",
+                "requestBody": {
+                    "description": "Candidate that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Candidate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Candidate"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/candidates/{id}": {
+            "get": {
+                "tags": [
+                    "Candidate"
+                ],
+                "summary": "Display the specified Candidate",
+                "description": "Get Candidate",
+                "operationId": "App\\Http\\Controllers\\API\\CandidateAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Candidate",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Candidate"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Candidate"
+                ],
+                "summary": "Update the specified Candidate in storage",
+                "description": "Update Candidate",
+                "operationId": "App\\Http\\Controllers\\API\\CandidateAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Candidate",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Candidate that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Candidate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Candidate"
+                ],
+                "summary": "Remove the specified Candidate from storage",
+                "description": "Delete Candidate",
+                "operationId": "App\\Http\\Controllers\\API\\CandidateAPIController::destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Candidate",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/candidates/login": {
+            "post": {
+                "tags": [
+                    "Candidate"
+                ],
+                "summary": "Candidate login",
+                "description": "Login candidate",
+                "operationId": "App\\Http\\Controllers\\API\\CandidateAPIController::login",
+                "requestBody": {
+                    "description": "Candidate that can login",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Candidate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Candidate"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/jobs": {
+            "get": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Get a listing of the Jobs.",
+                "description": "Get all Jobs",
+                "operationId": "App\\Http\\Controllers\\API\\JobAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Job"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Store a newly created Job in storage",
+                "description": "Store Job",
+                "operationId": "App\\Http\\Controllers\\API\\JobAPIController::store",
+                "requestBody": {
+                    "description": "Job that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Job"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Job"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/jobs/{id}": {
+            "get": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Display the specified Job",
+                "description": "Get Job",
+                "operationId": "App\\Http\\Controllers\\API\\JobAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Job",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Job"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Update the specified Job in storage",
+                "description": "Update Job",
+                "operationId": "App\\Http\\Controllers\\API\\JobAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Job",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Job that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Job"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Remove the specified Job from storage",
+                "description": "Delete Job",
+                "operationId": "App\\Http\\Controllers\\API\\JobAPIController::destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Job",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/job_applicants": {
+            "get": {
+                "tags": [
+                    "JobApplicant"
+                ],
+                "summary": "Get a listing of the JobApplicants.",
+                "description": "Get all JobApplicants",
+                "operationId": "App\\Http\\Controllers\\API\\JobApplicantAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/JobApplicant"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "JobApplicant"
+                ],
+                "summary": "Store a newly created JobApplicant in storage",
+                "description": "Store JobApplicant",
+                "operationId": "App\\Http\\Controllers\\API\\JobApplicantAPIController::store",
+                "requestBody": {
+                    "description": "JobApplicant that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/JobApplicant"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/JobApplicant"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/job_applicants/{id}": {
+            "get": {
+                "tags": [
+                    "JobApplicant"
+                ],
+                "summary": "Display the specified JobApplicant",
+                "description": "Get JobApplicant",
+                "operationId": "App\\Http\\Controllers\\API\\JobApplicantAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of JobApplicant",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/JobApplicant"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "JobApplicant"
+                ],
+                "summary": "Update the specified JobApplicant in storage",
+                "description": "Update JobApplicant",
+                "operationId": "App\\Http\\Controllers\\API\\JobApplicantAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of JobApplicant",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "JobApplicant that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/JobApplicant"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "JobApplicant"
+                ],
+                "summary": "Remove the specified JobApplicant from storage",
+                "description": "Delete JobApplicant",
+                "operationId": "App\\Http\\Controllers\\API\\JobApplicantAPIController::destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of JobApplicant",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/tests": {
+            "get": {
+                "tags": [
+                    "Test"
+                ],
+                "summary": "Get a listing of the Tests.",
+                "description": "Get all Tests",
+                "operationId": "App\\Http\\Controllers\\API\\TestAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Test"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Test"
+                ],
+                "summary": "Store a newly created Test in storage",
+                "description": "Store Test",
+                "operationId": "App\\Http\\Controllers\\API\\TestAPIController::store",
+                "requestBody": {
+                    "description": "Test that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Test"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Test"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/tests/{id}": {
+            "get": {
+                "tags": [
+                    "Test"
+                ],
+                "summary": "Display the specified Test",
+                "description": "Get Test",
+                "operationId": "App\\Http\\Controllers\\API\\TestAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Test",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Test"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Test"
+                ],
+                "summary": "Update the specified Test in storage",
+                "description": "Update Test",
+                "operationId": "App\\Http\\Controllers\\API\\TestAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Test",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Test that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Test"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Test"
+                ],
+                "summary": "Remove the specified Test from storage",
+                "description": "Delete Test",
+                "operationId": "App\\Http\\Controllers\\API\\TestAPIController::destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Test",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/users": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get a listing of the Users.",
+                "description": "Get all Users",
+                "operationId": "App\\Http\\Controllers\\API\\UsersAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Users"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Store a newly created Users in storage",
+                "description": "Store Users",
+                "operationId": "App\\Http\\Controllers\\API\\UsersAPIController::store",
+                "requestBody": {
+                    "description": "Users that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Users"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Users"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Display the specified Users",
+                "description": "Get Users",
+                "operationId": "App\\Http\\Controllers\\API\\UsersAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Users",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Users"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Update the specified Users in storage",
+                "description": "Update Users",
+                "operationId": "App\\Http\\Controllers\\API\\UsersAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Users",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Users that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Users"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Remove the specified Users from storage",
+                "description": "Delete Users",
+                "operationId": "App\\Http\\Controllers\\API\\UsersAPIController::destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Users",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Admin": {
+                "required": [
+                    "email",
+                    "username",
+                    "first_name",
+                    "last_name",
+                    "password"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "email": {
+                        "description": "email",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "username",
+                        "type": "string"
+                    },
+                    "first_name": {
+                        "description": "first_name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "last_name",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "password",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Answer": {
+                "required": [
+                    "question_id",
+                    "candidate_id",
+                    "answers"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "question_id": {
+                        "description": "question_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "candidate_id": {
+                        "description": "candidate_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "answers": {
+                        "description": "answers",
+                        "type": "string"
+                    },
+                    "marks": {
+                        "description": "marks",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Candidate": {
+                "required": [
+                    "email",
+                    "username",
+                    "first_name",
+                    "last_name",
+                    "password",
+                    "address",
+                    "phone_number"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "email": {
+                        "description": "email",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "username",
+                        "type": "string"
+                    },
+                    "first_name": {
+                        "description": "first_name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "last_name",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "password",
+                        "type": "string"
+                    },
+                    "address": {
+                        "description": "address",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "phone_number",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Job": {
+                "required": [
+                    "title",
+                    "description",
+                    "qualification",
+                    "employment_type",
+                    "job_function",
+                    "jobs_status"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "title": {
+                        "description": "title",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "description",
+                        "type": "string"
+                    },
+                    "responsibility": {
+                        "description": "responsibility",
+                        "type": "string"
+                    },
+                    "qualification": {
+                        "description": "qualification",
+                        "type": "string"
+                    },
+                    "remuneration": {
+                        "description": "remuneration",
+                        "type": "number",
+                        "format": "number"
+                    },
+                    "employment_type": {
+                        "description": "employment_type",
+                        "type": "string"
+                    },
+                    "job_function": {
+                        "description": "job_function",
+                        "type": "string"
+                    },
+                    "industry": {
+                        "description": "industry",
+                        "type": "string"
+                    },
+                    "seniority_level": {
+                        "description": "seniority_level",
+                        "type": "string"
+                    },
+                    "pay_range": {
+                        "description": "pay_range",
+                        "type": "string"
+                    },
+                    "jobs_status": {
+                        "description": "jobs_status",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "JobApplicant": {
+                "required": [
+                    "job_id",
+                    "candidate_id"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "job_id": {
+                        "description": "job_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "candidate_id": {
+                        "description": "candidate_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Test": {
+                "required": [
+                    "question",
+                    "answer",
+                    "grade",
+                    "job_id"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "question": {
+                        "description": "question",
+                        "type": "string"
+                    },
+                    "answer": {
+                        "description": "answer",
+                        "type": "string"
+                    },
+                    "grade": {
+                        "description": "grade",
+                        "type": "string"
+                    },
+                    "job_id": {
+                        "description": "job_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Users": {
+                "required": [
+                    "name",
+                    "email",
+                    "password"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "description": "name",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "email",
+                        "type": "string"
+                    },
+                    "email_verified_at": {
+                        "description": "email_verified_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "password": {
+                        "description": "password",
+                        "type": "string"
+                    },
+                    "remember_token": {
+                        "description": "remember_token",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "apikey": {
+                "type": "apiKey",
+                "name": "apikey",
+                "in": "header"
+            },
+            "Authorization": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [
+        {
+            "apikey": []
+        },
+        {
+            "Authorization": []
+        }
+    ]
+}
