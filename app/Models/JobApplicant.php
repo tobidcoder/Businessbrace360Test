@@ -43,7 +43,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class JobApplicant extends Model
 {
-    use SoftDeletes;
+//    use SoftDeletes;
 
     public $table = 'job_applicants';
     

@@ -18,6 +18,7 @@ class CreateSuccessfulCandidatesTable extends Migration
             $table->unsignedBigInteger('job_id');
             $table->unsignedBigInteger('candidate_id');
             $table->unsignedBigInteger('pass_mark');
+            $table->enum('employed', [TRUE, FALSE]);
             $table->timestamps();
         });
     }

@@ -29,7 +29,12 @@ Route::resource('candidates', 'CandidateAPIController');
 Route::post('/candidates/login', 'CandidateAPIController@login');
 
 Route::resource('jobs', 'JobAPIController');
+Route::get('/test-for-jobs/{id}', 'JobAPIController@GetTestForJobs');
+Route::get('/list-of-applicant-for-jobs/{id}', 'JobAPIController@GetListOfApplicantsForAJobs');
+Route::get('/list-success-candidate-for-a-job/{id}', 'JobAPIController@GetListOfSuccessfulCandidateForAJobs');
 
 Route::resource('job_applicants', 'JobApplicantAPIController');
 
 Route::resource('tests', 'TestAPIController');
+
+Route::resource('successful_candidates', 'SuccessfulCandidateAPIController');

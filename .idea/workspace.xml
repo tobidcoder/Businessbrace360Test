@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c880c7e8-15f0-450b-ac30-966fd7c513e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/docs/api-docs.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/auth.php" afterPath="$PROJECT_DIR$/config/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/swaggervel.php" afterPath="$PROJECT_DIR$/config/swaggervel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/AdminAPIController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/AdminAPIController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/AnswerAPIController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/AnswerAPIController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/CandidateAPIController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/CandidateAPIController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/JobAPIController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/JobAPIController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UsersAPIController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UsersAPIController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Admin.php" afterPath="$PROJECT_DIR$/app/Models/Admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Answer.php" afterPath="$PROJECT_DIR$/app/Models/Answer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Candidate.php" afterPath="$PROJECT_DIR$/app/Models/Candidate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Job.php" afterPath="$PROJECT_DIR$/app/Models/Job.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/JobApplicant.php" afterPath="$PROJECT_DIR$/app/Models/JobApplicant.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Test.php" afterPath="$PROJECT_DIR$/app/Models/Test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Users.php" afterPath="$PROJECT_DIR$/app/Models/Users.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2020_10_29_102305_create_successful_candidates_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_10_29_102305_create_successful_candidates_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/docs/api-docs.json" afterPath="$PROJECT_DIR$/storage/docs/api-docs.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,55 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersAPIController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UsersAPIController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="114" column="29" lean-forward="false" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
-              <folding>
-                <element signature="e#44#92#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CandidateAPIController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/CandidateAPIController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#44#96#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Candidate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Candidate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="126">
+              <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
               <folding>
                 <element signature="e#30#52#0#PHP" expanded="true" />
               </folding>
@@ -79,24 +40,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthServiceProvider.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
+      <file leaf-file-name="Job.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Job.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-              <folding>
-                <element signature="e#35#65#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/auth.php">
+      <file leaf-file-name="JobApplicant.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/JobApplicant.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Test.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Users.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-440">
+              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JobAPIController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/JobAPIController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="420" column="56" lean-forward="false" selection-start-line="420" selection-start-column="20" selection-end-line="420" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnswerAPIController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/AnswerAPIController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="337" column="0" lean-forward="true" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api-docs.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/docs/api-docs.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1604045145723" expanded="true" signature="254:8371" ph="{...}" />
+                <marker date="1604045145723" expanded="true" signature="254:34570" ph="{...}" />
+                <marker date="1604045145723" expanded="true" signature="81585:81608" ph="{&quot;description&quot;: &quot;candidate_id&quot;...}" />
+                <marker date="1604045145723" expanded="true" signature="81585:82026" ph="{...}" />
+                <marker date="1604045145723" expanded="true" signature="81585:82074" ph="{&quot;type&quot;: &quot;object&quot;...}" />
+                <marker date="1604045145723" expanded="true" signature="81585:85227" ph="{...}" />
+                <marker date="1604045145723" expanded="true" signature="81585:85562" ph="{...}" />
+                <marker date="1604045145723" expanded="true" signature="83081:83104" ph="{&quot;description&quot;: &quot;password&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,31 +122,9 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="295">
+              <caret line="33" column="110" lean-forward="false" selection-start-line="33" selection-start-column="110" selection-end-line="33" selection-end-column="110" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JobApplicantAPIController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/JobApplicantAPIController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3634">
-              <caret line="232" column="33" lean-forward="false" selection-start-line="232" selection-start-column="33" selection-end-line="232" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppBaseController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AppBaseController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-              <folding>
-                <element signature="e#40#80#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -153,7 +149,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2020_10_29_094645_create_job_applicants_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_10_29_094721_create_answers_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_10_29_094701_create_tests_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_10_29_102305_create_successful_candidates_table.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2020_10_29_094621_create_jobs_table.php" />
         <option value="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
@@ -161,19 +156,27 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/app/Repositories/BaseRepository.php" />
         <option value="$PROJECT_DIR$/storage/docs/api-docs.json" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/API/AdminAPIController.php" />
         <option value="$PROJECT_DIR$/config/infyom/laravel_generator.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/API/UsersAPIController.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AppBaseController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/API/JobApplicantAPIController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/API/CandidateAPIController.php" />
-        <option value="$PROJECT_DIR$/app/Models/Candidate.php" />
-        <option value="$PROJECT_DIR$/app/Models/Admin.php" />
         <option value="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
         <option value="$PROJECT_DIR$/config/auth.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/API/UsersAPIController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/API/AdminAPIController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/API/CandidateAPIController.php" />
+        <option value="$PROJECT_DIR$/app/Models/Admin.php" />
+        <option value="$PROJECT_DIR$/app/Models/Answer.php" />
+        <option value="$PROJECT_DIR$/app/Models/Candidate.php" />
+        <option value="$PROJECT_DIR$/app/Models/Job.php" />
+        <option value="$PROJECT_DIR$/app/Models/JobApplicant.php" />
+        <option value="$PROJECT_DIR$/app/Models/Test.php" />
+        <option value="$PROJECT_DIR$/app/Models/Users.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_10_29_102305_create_successful_candidates_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/API/JobAPIController.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/API/AnswerAPIController.php" />
       </list>
     </option>
   </component>
@@ -290,22 +293,6 @@
             <path>
               <item name="businessbrace360Test" type="b2602c69:ProjectViewProjectNode" />
               <item name="businessbrace360Test" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="businessbrace360Test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="businessbrace360Test" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="infyom" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="businessbrace360Test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="businessbrace360Test" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="businessbrace360Test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="businessbrace360Test" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -360,12 +347,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603959502012</updated>
-      <workItem from="1603959503748" duration="13982000" />
+      <workItem from="1603959503748" duration="20465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13982000" />
+    <option name="totallyTimeSpent" value="20465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -478,14 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_10_29_102305_create_successful_candidates_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -498,14 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/API/CreateAdminAPIRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -542,22 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1603974926116" expanded="true" signature="103:1363" ph=" Class Users ..." />
-            <marker date="1603974926116" expanded="true" signature="1391:2456" ph="{...}" />
-            <marker date="1603974926116" expanded="true" signature="1592:1704" ph="..." />
-            <marker date="1603974926116" expanded="true" signature="1715:1807" ph=" The attributes that should be casted to native types. ..." />
-            <marker date="1603974926116" expanded="true" signature="1834:2035" ph="..." />
-            <marker date="1603974926116" expanded="true" signature="2046:2101" ph=" Validation rules ..." />
-            <marker date="1603974926116" expanded="true" signature="2132:2446" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -590,26 +545,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/AdminAPIController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/infyom/laravel_generator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="216" column="0" lean-forward="false" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/AnswerAPIController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -619,112 +558,6 @@
         <state relative-caret-position="513">
           <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/docs/api-docs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1603976968056" expanded="true" signature="0:71880" ph="{&quot;openapi&quot;: &quot;3.0.0&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="38:116" ph="{&quot;title&quot;: &quot;GetriPay Loan Service&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="133:239" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="143:233" ph="{&quot;url&quot;: &quot;/api&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="254:8371" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="275:3526" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="296:1763" ph="{&quot;summary&quot;: &quot;Get a listing of the Admins.&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="322:369" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="597:1749" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="626:1731" ph="{&quot;description&quot;: &quot;successful operation&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="726:1709" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="776:1683" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="820:1653" ph="{&quot;type&quot;: &quot;object&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="872:1565" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="925:1030" ph="{&quot;type&quot;: &quot;boolean&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="1080:1370" ph="{&quot;type&quot;: &quot;array&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="1196:1328" ph="{&quot;$ref&quot;: &quot;##/components/schemas/Admin&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="1423:1527" ph="{&quot;type&quot;: &quot;string&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="1785:3516" ph="{&quot;summary&quot;: &quot;Store a newly created Admin in storage&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="1811:1858" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="2095:2485" ph="{&quot;description&quot;: &quot;Admin that should be stored&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="2233:2467" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="2279:2445" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="2319:2419" ph="{&quot;$ref&quot;: &quot;##/components/schemas/Admin&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="2516:3502" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="2545:3484" ph="{&quot;description&quot;: &quot;successful operation&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="2645:3462" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="2695:3436" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="2739:3406" ph="{&quot;type&quot;: &quot;object&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="2791:3318" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="2844:2949" ph="{&quot;type&quot;: &quot;boolean&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="2999:3123" ph="{&quot;$ref&quot;: &quot;##/components/schemas/Admin&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="3176:3280" ph="{&quot;type&quot;: &quot;string&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="3552:8359" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="3573:5289" ph="{&quot;summary&quot;: &quot;Display the specified Admin&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="3599:3646" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="3868:4258" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="3890:4240" ph="{&quot;name&quot;: &quot;id&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="4098:4218" ph="{&quot;type&quot;: &quot;integer&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="4289:5275" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="4318:5257" ph="{&quot;description&quot;: &quot;successful operation&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="4418:5235" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="4468:5209" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="4512:5179" ph="{&quot;type&quot;: &quot;object&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="4564:5091" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="4617:4722" ph="{&quot;type&quot;: &quot;boolean&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="4772:4896" ph="{&quot;$ref&quot;: &quot;##/components/schemas/Admin&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="4949:5053" ph="{&quot;type&quot;: &quot;string&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="5310:6611" ph="{&quot;summary&quot;: &quot;Update the specified Admin in storage&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="5336:5383" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="5620:6010" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="5642:5992" ph="{&quot;name&quot;: &quot;id&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="5850:5970" ph="{&quot;type&quot;: &quot;integer&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="6043:6434" ph="{&quot;description&quot;: &quot;Admin that should be updated&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="6182:6416" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="6228:6394" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="6268:6368" ph="{&quot;$ref&quot;: &quot;##/components/schemas/Admin&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="6465:6597" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="6494:6579" ph="{&quot;description&quot;: &quot;successful operation&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="6635:8349" ph="{&quot;summary&quot;: &quot;Remove the specified Admin from storage&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="6661:6708" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="6948:7338" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="6970:7320" ph="{&quot;name&quot;: &quot;id&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="7178:7298" ph="{&quot;type&quot;: &quot;integer&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="7369:8335" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="7398:8317" ph="{&quot;description&quot;: &quot;successful operation&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="7498:8295" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="7548:8269" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="7592:8239" ph="{&quot;type&quot;: &quot;object&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="7644:8151" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="7697:7802" ph="{&quot;type&quot;: &quot;boolean&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="7852:7956" ph="{&quot;type&quot;: &quot;string&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="8009:8113" ph="{&quot;type&quot;: &quot;string&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="69274:69297" ph="{&quot;description&quot;: &quot;password&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="69274:69715" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="69274:69763" ph="{&quot;type&quot;: &quot;object&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="69274:71420" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="69274:71755" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="69333:69497" ph="{&quot;description&quot;: &quot;created_at&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="69533:69697" ph="{&quot;description&quot;: &quot;updated_at&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="69786:71410" ph="{&quot;type&quot;: &quot;object&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="69816:69923" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="69955:71362" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="69983:70136" ph="{&quot;description&quot;: &quot;id&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="70166:70277" ph="{&quot;description&quot;: &quot;name&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="70308:70420" ph="{&quot;description&quot;: &quot;email&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="70463:70634" ph="{&quot;description&quot;: &quot;email_verified_at&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="70668:70783" ph="{&quot;description&quot;: &quot;password&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="70823:70944" ph="{&quot;description&quot;: &quot;remember_token&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="70980:71144" ph="{&quot;description&quot;: &quot;created_at&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="71180:71344" ph="{&quot;description&quot;: &quot;updated_at&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="71449:71749" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="71473:71587" ph="{&quot;name&quot;: &quot;apikey&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="71618:71739" ph="{&quot;name&quot;: &quot;Authorization&quot;...}" />
-            <marker date="1603976968056" expanded="true" signature="71773:71878" ph="[...]" />
-            <marker date="1603976968056" expanded="true" signature="71783:71819" ph="{...}" />
-            <marker date="1603976968056" expanded="true" signature="71829:71872" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -744,31 +577,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UsersAPIController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="114" column="29" lean-forward="false" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
-          <folding>
-            <element signature="e#44#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AppBaseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding>
-            <element signature="e#40#80#0#PHP" expanded="true" />
+            <element signature="e#40#80#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,48 +595,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/CandidateAPIController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#96#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Candidate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#30#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
-            <element signature="e#35#65#0#PHP" expanded="true" />
+            <element signature="e#35#65#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/auth.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/API/CreateAdminAPIRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/AdminAPIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/CandidateAPIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="383" column="15" lean-forward="true" selection-start-line="383" selection-start-column="15" selection-end-line="383" selection-end-column="15" />
+          <folding>
+            <element signature="e#44#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UsersAPIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="112" column="46" lean-forward="false" selection-start-line="112" selection-start-column="46" selection-end-line="112" selection-end-column="46" />
+          <folding>
+            <element signature="e#44#92#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+          <folding>
+            <element signature="e#30#52#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Answer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Candidate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding>
+            <element signature="e#30#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Job.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/JobApplicant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/docs/api-docs.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1604045145723" expanded="true" signature="254:8371" ph="{...}" />
+            <marker date="1604045145723" expanded="true" signature="254:34570" ph="{...}" />
+            <marker date="1604045145723" expanded="true" signature="81585:81608" ph="{&quot;description&quot;: &quot;candidate_id&quot;...}" />
+            <marker date="1604045145723" expanded="true" signature="81585:82026" ph="{...}" />
+            <marker date="1604045145723" expanded="true" signature="81585:82074" ph="{&quot;type&quot;: &quot;object&quot;...}" />
+            <marker date="1604045145723" expanded="true" signature="81585:85227" ph="{...}" />
+            <marker date="1604045145723" expanded="true" signature="81585:85562" ph="{...}" />
+            <marker date="1604045145723" expanded="true" signature="83081:83104" ph="{&quot;description&quot;: &quot;password&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/SuccessfulCandidateAPIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3188">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_10_29_102305_create_successful_candidates_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-440">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="33" column="110" lean-forward="false" selection-start-line="33" selection-start-column="110" selection-end-line="33" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/JobAPIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="420" column="56" lean-forward="false" selection-start-line="420" selection-start-column="20" selection-end-line="420" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/AnswerAPIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="337" column="0" lean-forward="true" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
           <folding />
         </state>
       </provider>

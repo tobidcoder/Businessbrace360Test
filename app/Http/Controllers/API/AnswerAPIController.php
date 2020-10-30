@@ -8,6 +8,7 @@ use App\Models\Answer;
 use App\Repositories\AnswerRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\Validator;
 use Response;
 
 /**
@@ -277,5 +278,60 @@ class AnswerAPIController extends AppBaseController
         $answer->delete();
 
         return $this->sendSuccess('Answer deleted successfully');
+    }
+
+    /**
+     * @param CreateAnswerAPIRequest $request
+     * @return Response
+     *
+     * @OA\Post(
+     *      path="/answers/post-marks",
+     *      summary="Post marks for an answer",
+     *      tags={"Answer"},
+     *      description="POST MARKS",
+     *      @OA\RequestBody(
+     *          description="Marks that should be stored",
+     *          required=false,
+     *          @OA\JsonContent(ref="#/components/schemas/Answer")
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation",
+     *          @OA\JsonContent(
+     *              type="object",
+     *              @OA\Property(
+     *                  property="success",
+     *                  type="boolean"
+     *              ),
+     *              @OA\Property(
+     *                  property="data",
+     *                  ref="#/components/schemas/Answer"
+     *              ),
+     *              @OA\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      )
+     * )
+     */
+    public function postMarksForAnswer(CreateAnswerAPIRequest $request)
+    {
+        $input = $request->all();
+
+        $validator = Validator::make($input, [
+                    'answer_id' => 'required',
+                    'marks' => 'required',
+                    ]);
+        if($validator->fails()){
+            return $this->sendError('Validation fail', $validator->errors());
+        }
+
+        $answer = Answer::find($request->answer_id);
+         $answer->marks = $request->marks;
+
+         $this->answerRepository->update(['marks' => $answer->marks], $answer->id);
+
+        return $this->sendResponse($answer->toArray(), 'Answer Marks saved successfully');
     }
 }

@@ -53,7 +53,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Answer extends Model
 {
-    use SoftDeletes;
+//    use SoftDeletes;
 
     public $table = 'answers';
     

@@ -106,9 +106,41 @@ class AdminAPIController extends AppBaseController
     {
         $input = $request->all();
 
-        $admin = $this->adminRepository->create($input);
+        try{
+            $validate = Validator::make($input,[
+                'first_name' => 'required',
+                'last_name' => 'required',
+                'username' => 'required',
+                'email' => 'required|email|unique:users',
+                'password' => 'required',
+            ]);
 
-        return $this->sendResponse($admin->toArray(), 'Admin saved successfully');
+            if($validate->fails()){
+                return $this->sendError('Validations Error', $validate->errors());
+            }
+
+            $admin = Admin::create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'username' => $request->username,
+                'email' => $request->email,
+                'password' => bcrypt($request->password),
+
+            ]);
+            if($admin) {
+                $token = $admin->createToken('businessbrace360')->accessToken;
+
+                $admin['token'] = $token;
+
+
+                return $this->sendResponse($admin, 'Admin Register successful!', 'BT001');
+            } else {
+                return $this->sendError('Error', 'something went wrong!');
+            }
+
+        }catch(\Exception $e){
+            Log::error('Error in Register Admin : '.$e);
+        }
     }
 
     /**
@@ -278,4 +310,42 @@ class AdminAPIController extends AppBaseController
 
         return $this->sendSuccess('Admin deleted successfully');
     }
+
+    public function login(Request $request)
+    {
+        $input = $request->all();
+        try{
+            $validate = Validator::make($input,[
+                'email' => 'required',
+                'password' => 'required',
+            ]);
+
+            if($validate->fails()){
+                return $this->sendError('Validations Error', $validate->errors());
+            }
+
+            $login = Admin::where('email', $request->email)->first();
+            if ($login) {
+                $passowrd_check = Hash::check($request->password, $login->password);
+
+                if(!$passowrd_check){
+
+                    return $this->sendError('Incorrect password', ['error' => 'Incorrect Password']);
+
+                }
+                $token = $login->createToken('businessbrace360')->accessToken;
+
+                $login['token'] = $token;
+
+                return $this->sendResponse($login, 'Admin Login successful!', 'BT006');
+
+            } else {
+                return $this->sendError('Error', 'Email or password not correct!');
+            }
+
+        }catch(\Exception $e){
+            Log::error('Error in Admin login : '.$e);
+        }
+    }
+
 }

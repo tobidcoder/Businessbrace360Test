@@ -863,6 +863,96 @@
                 }
             }
         },
+        "/test-for-jobs/{id}": {
+            "get": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Display Test for a Job",
+                "description": "Get Test for a Job",
+                "operationId": "App\\Http\\Controllers\\API\\JobAPIController::GetTestForJobs",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Job",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Job"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/list-of-applicant-for-jobs/{id}": {
+            "get": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Display List of applicant for a Job",
+                "description": "Get List of Applicants for a Job",
+                "operationId": "App\\Http\\Controllers\\API\\JobAPIController::GetListOfApplicantsForAJobs",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Job",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Job"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/job_applicants": {
             "get": {
                 "tags": [
@@ -1033,6 +1123,208 @@
                         "name": "id",
                         "in": "path",
                         "description": "id of JobApplicant",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/successfulCandidates": {
+            "get": {
+                "tags": [
+                    "SuccessfulCandidate"
+                ],
+                "summary": "Get a listing of the SuccessfulCandidates.",
+                "description": "Get all SuccessfulCandidates",
+                "operationId": "App\\Http\\Controllers\\API\\SuccessfulCandidateAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/SuccessfulCandidate"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "SuccessfulCandidate"
+                ],
+                "summary": "Store a newly created SuccessfulCandidate in storage",
+                "description": "Store SuccessfulCandidate",
+                "operationId": "App\\Http\\Controllers\\API\\SuccessfulCandidateAPIController::store",
+                "requestBody": {
+                    "description": "SuccessfulCandidate that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SuccessfulCandidate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/SuccessfulCandidate"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/successfulCandidates/{id}": {
+            "get": {
+                "tags": [
+                    "SuccessfulCandidate"
+                ],
+                "summary": "Display the specified SuccessfulCandidate",
+                "description": "Get SuccessfulCandidate",
+                "operationId": "App\\Http\\Controllers\\API\\SuccessfulCandidateAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of SuccessfulCandidate",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/SuccessfulCandidate"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "SuccessfulCandidate"
+                ],
+                "summary": "Update the specified SuccessfulCandidate in storage",
+                "description": "Update SuccessfulCandidate",
+                "operationId": "App\\Http\\Controllers\\API\\SuccessfulCandidateAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of SuccessfulCandidate",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "SuccessfulCandidate that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SuccessfulCandidate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "SuccessfulCandidate"
+                ],
+                "summary": "Remove the specified SuccessfulCandidate from storage",
+                "description": "Delete SuccessfulCandidate",
+                "operationId": "App\\Http\\Controllers\\API\\SuccessfulCandidateAPIController::destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of SuccessfulCandidate",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -1712,6 +2004,51 @@
                         "description": "candidate_id",
                         "type": "integer",
                         "format": "int32"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "SuccessfulCandidate": {
+                "required": [
+                    "job_id",
+                    "candidate_id",
+                    "pass_mark",
+                    "employed"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "job_id": {
+                        "description": "job_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "candidate_id": {
+                        "description": "candidate_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "pass_mark": {
+                        "description": "pass_mark",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "employed": {
+                        "description": "employed",
+                        "type": "string"
                     },
                     "created_at": {
                         "description": "created_at",

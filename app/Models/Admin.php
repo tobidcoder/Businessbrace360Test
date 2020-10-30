@@ -58,7 +58,7 @@ use Laravel\Passport\HasApiTokens;
  */
 class Admin extends Authenticatable
 {
-    use HasApiTokens, SoftDeletes;
+    use HasApiTokens;
 
     public $table = 'admins';
     

@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @OA\Schema(
- *      schema="Test",
- *      required={"question", "answer", "grade", "job_id"},  
+ *      schema="SuccessfulCandidate",
+ *      required={"job_id", "candidate_id", "pass_mark", "employed"},  
  *      @OA\Property(
  *          property="id",
  *          type="integer",
@@ -16,25 +16,27 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          description="id"
  *      ),
  *      @OA\Property(
- *          property="question",
- *          type="string",
- *          description="question"
- *      ),
- *      @OA\Property(
- *          property="answer",
- *          type="string",
- *          description="answer"
- *      ),
- *      @OA\Property(
- *          property="grade",
- *          type="string",
- *          description="grade"
- *      ),
- *      @OA\Property(
  *          property="job_id",
  *          type="integer",
  *          format="int32",
  *          description="job_id"
+ *      ),
+ *      @OA\Property(
+ *          property="candidate_id",
+ *          type="integer",
+ *          format="int32",
+ *          description="candidate_id"
+ *      ),
+ *      @OA\Property(
+ *          property="pass_mark",
+ *          type="integer",
+ *          format="int32",
+ *          description="pass_mark"
+ *      ),
+ *      @OA\Property(
+ *          property="employed",
+ *          type="string",
+ *          description="employed"
  *      ),
  *      @OA\Property(
  *          property="created_at",
@@ -50,11 +52,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *      )    
  * )
  */
-class Test extends Model
+class SuccessfulCandidate extends Model
 {
-//    use SoftDeletes;
+    use SoftDeletes;
 
-    public $table = 'tests';
+    public $table = 'successful_candidates';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -65,10 +67,10 @@ class Test extends Model
 
 
     public $fillable = [
-        'question',
-        'answer',
-        'grade',
-        'job_id'
+        'job_id',
+        'candidate_id',
+        'pass_mark',
+        'employed'
     ];
 
     /**
@@ -78,10 +80,10 @@ class Test extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'question' => 'string',
-        'answer' => 'string',
-        'grade' => 'string',
-        'job_id' => 'integer'
+        'job_id' => 'integer',
+        'candidate_id' => 'integer',
+        'pass_mark' => 'integer',
+        'employed' => 'string'
     ];
 
     /**
@@ -90,10 +92,10 @@ class Test extends Model
      * @var array
      */
     public static $rules = [
-        'question' => 'required|string',
-        'answer' => 'required|string|max:255',
-        'grade' => 'required|string|max:255',
         'job_id' => 'required',
+        'candidate_id' => 'required',
+        'pass_mark' => 'required',
+        'employed' => 'required|string',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];

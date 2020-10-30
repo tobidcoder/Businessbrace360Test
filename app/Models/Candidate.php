@@ -67,7 +67,7 @@ use Laravel\Passport\HasApiTokens;
  */
 class Candidate extends Authenticatable
 {
-    use HasApiTokens, SoftDeletes;
+    use HasApiTokens;
 
     public $table = 'candidates';
     

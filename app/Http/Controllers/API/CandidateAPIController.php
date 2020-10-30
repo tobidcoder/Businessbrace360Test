@@ -110,9 +110,7 @@ class CandidateAPIController extends AppBaseController
     {
         $input = $request->all();
 //
-//        $candidate = $this->candidateRepository->create($input);
 //
-//        return $this->sendResponse($candidate->toArray(), 'Candidate saved successfully');
         try{
             $validate = Validator::make($input,[
                 'first_name' => 'required',
@@ -359,9 +357,7 @@ class CandidateAPIController extends AppBaseController
 
     public function login(Request $request)
     {
-//        return $request;
-//        $input = $request->data;
-//        return $input;
+//
 
         $input = $request->all();
         try{
@@ -383,7 +379,7 @@ class CandidateAPIController extends AppBaseController
                     return $this->sendError('Incorrect password', ['error' => 'Incorrect Password']);
 
                 }
-                $token = auth()->user()->createToken('businessbrace360')->accessToken;
+                $token = $login->createToken('businessbrace360')->accessToken;
 
                 $user['token'] = $token;
 
@@ -392,7 +388,6 @@ class CandidateAPIController extends AppBaseController
             } else {
                 return $this->sendError('Error', 'Email or password not correct!');
             }
-
         }catch(\Exception $e){
             Log::error('Error in Candidate login : '.$e);
         }
