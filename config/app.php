@@ -229,8 +229,6 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
-        'Agent' => Jenssegers\Agent\Facades\Agent::class,
-        'Curl' => Ixudra\Curl\Facades\Curl::class,
     ],
 
 ];
