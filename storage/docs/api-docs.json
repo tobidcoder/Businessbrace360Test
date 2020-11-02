@@ -415,6 +415,50 @@
                 }
             }
         },
+        "/answers/post-marks": {
+            "post": {
+                "tags": [
+                    "Answer"
+                ],
+                "summary": "Post marks for an answer",
+                "description": "POST MARKS",
+                "operationId": "App\\Http\\Controllers\\API\\AnswerAPIController::postMarksForAnswer",
+                "requestBody": {
+                    "description": "Marks that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Answer"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Answer"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/candidates": {
             "get": {
                 "tags": [
@@ -916,6 +960,96 @@
                 "summary": "Display List of applicant for a Job",
                 "description": "Get List of Applicants for a Job",
                 "operationId": "App\\Http\\Controllers\\API\\JobAPIController::GetListOfApplicantsForAJobs",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Job",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Job"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/list-success-candidate-for-a-job/{id}": {
+            "get": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Display List of successful candidate for a Job",
+                "description": "Get List of successful candidate for a Job",
+                "operationId": "App\\Http\\Controllers\\API\\JobAPIController::GetListOfSuccessfulCandidateForAJobs",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Job",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Job"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/list-jobs-for-a-candidate/{id}": {
+            "get": {
+                "tags": [
+                    "Job"
+                ],
+                "summary": "Display List of jobs applied for, for a candidate",
+                "description": "Get List of Jobs for a candidate",
+                "operationId": "App\\Http\\Controllers\\API\\JobAPIController::GetListOfJobsForACandidate",
                 "parameters": [
                     {
                         "name": "id",

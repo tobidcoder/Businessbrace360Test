@@ -24,6 +24,7 @@ Route::resource('admins', 'AdminAPIController');
 Route::resource('users', 'UsersAPIController');
 
 Route::resource('answers', 'AnswerAPIController');
+Route::post('/answers/post-marks', 'AnswerAPIController@postMarksForAnswer');
 
 Route::resource('candidates', 'CandidateAPIController');
 Route::post('/candidates/login', 'CandidateAPIController@login');

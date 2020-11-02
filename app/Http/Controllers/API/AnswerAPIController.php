@@ -328,10 +328,13 @@ class AnswerAPIController extends AppBaseController
         }
 
         $answer = Answer::find($request->answer_id);
+        if(!$answer){
+            return $this->sendError('Answer not found', 'This Answer not found', 'BT012');
+        }
          $answer->marks = $request->marks;
 
          $this->answerRepository->update(['marks' => $answer->marks], $answer->id);
 
-        return $this->sendResponse($answer->toArray(), 'Answer Marks saved successfully');
+        return $this->sendResponse($answer->toArray(), 'Answer Marks saved successfully', 'BT013');
     }
 }

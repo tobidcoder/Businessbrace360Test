@@ -54,7 +54,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class SuccessfulCandidate extends Model
 {
-    use SoftDeletes;
+//    use SoftDeletes;
 
     public $table = 'successful_candidates';
     

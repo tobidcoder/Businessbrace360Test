@@ -425,4 +425,52 @@ class JobAPIController extends AppBaseController
         }
         return $this->sendError('Error', 'Something went wrong, when getting list of successful candidate for a job');
     }
+
+    /**
+     * @param int $id
+     * @return Response
+     *
+     * @OA\Get(
+     *      path="/list-jobs-for-a-candidate/{id}",
+     *      summary="Display List of jobs applied for, for a candidate",
+     *      tags={"Job"},
+     *      description="Get List of Jobs for a candidate",
+     *      @OA\Parameter(
+     *          name="id",
+     *          description="id of Job",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer",
+     *              format="int64"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation",
+     *          @OA\JsonContent(
+     *              type="object",
+     *              @OA\Property(
+     *                  property="success",
+     *                  type="boolean"
+     *              ),
+     *              @OA\Property(
+     *                  property="data",
+     *                  ref="#/components/schemas/Job"
+     *              ),
+     *              @OA\Property(
+     *                  property="message",
+     *                  type="string"
+     *              )
+     *          )
+     *      )
+     * )
+     */
+    public function GetListOfJobsForACandidate($id){
+        $tests = Job::where('job_id', '=', $id)->get();
+        if($tests){
+            return $this->sendResponse($tests, 'List of successful candidate for a job, get successful', 'BT008');
+        }
+        return $this->sendError('Error', 'Something went wrong, when getting list of successful candidate for a job');
+    }
 }
